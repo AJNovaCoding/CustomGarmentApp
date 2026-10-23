@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CustomGarmentApp.Pages.GarmentPage"
+    Title="Garment Catalog"
+    BackgroundColor="#0D0D0D"
+    Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            Spacing="20">
+
+            <!-- Store Heading -->
+            <Label
+                Text="CUSTOM GARMENT"
+                FontSize="28"
+                FontAttributes="Bold"
+                CharacterSpacing="3"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="SELECT YOUR GARMENT"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="#B0B0B0"
+                HorizontalOptions="Center" />
+
+            <!-- Garment 1 -->
+            <Border
+                BackgroundColor="#222222"
+                Padding="20"
+                StrokeThickness="0">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="CUSTOM JACKET"
+                        FontSize="20"
+                        TextColor="White"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="Personalize a jacket with colors, fabrics, and accessories."
+                        TextColor="#B0B0B0" />
+
+                    <Button
+                        Text="CUSTOMIZE"
+                        BackgroundColor="White"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Garment 2 -->
+            <Border
+                BackgroundColor="#222222"
+                Padding="20"
+                StrokeThickness="0">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="CUSTOM DRESS"
+                        FontSize="20"
+                        TextColor="White"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="Create a personalized dress with unique design options."
+                        TextColor="#B0B0B0" />
+
+                    <Button
+                        Text="CUSTOMIZE"
+                        BackgroundColor="White"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Garment 3 -->
+            <Border
+                BackgroundColor="#222222"
+                Padding="20"
+                StrokeThickness="0">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="CUSTOM SKIRT"
+                        FontSize="20"
+                        TextColor="White"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="Choose your preferred style, fabric, and embellishments."
+                        TextColor="#B0B0B0" />
+
+                    <Button
+                        Text="CUSTOMIZE"
+                        BackgroundColor="White"
+                        TextColor="Black" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

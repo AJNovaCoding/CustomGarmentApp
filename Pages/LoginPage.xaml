@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomGarmentApp.Pages.LoginPage"
+             Title="LoginPage"
+             BackgroundColor="#0D0D0D"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="15"
+        VerticalOptions="Center">
+        <!--Application Name-->
+        <Label
+            Text="CUSTOM GARMENT"
+            FontSize="28"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="Center"
+            CharacterSpacing="3" />
+
+        <!--Welcome Heading -->
+        <Label
+            Text="WELCOME BACK"
+            FontSize="20"
+            FontAttributes="Bold"
+            TextColor="#B0B0B0"
+            HorizontalOptions="Center"
+            Margin="0,25,0,0" />
+
+        <!-- Email Input -->
+        <Entry
+            x:Name="EmailEntry"
+            Placeholder="Email Address"
+            Keyboard="Email"
+            TextColor="White"
+            PlaceholderColor="#888888"
+            BackgroundColor="#222222"
+            HeightRequest="55"
+            Margin="0,25,0,0" />
+
+        <!-- Password Input -->
+        <Entry
+            x:Name="PasswordEntry"
+            Placeholder="Password"
+            IsPassword="True"
+            TextColor="White"
+            PlaceholderColor="#888888"
+            BackgroundColor="#222222"
+            HeightRequest="55" />
+
+        <!-- Sign In Button -->
+        <Button
+           x:Name="LoginButton"
+           Text="SIGN IN"
+            Clicked="LoginClicked"
+           BackgroundColor="White"
+           TextColor="Black"
+           FontAttributes="Bold"
+           FontSize="16"
+           HeightRequest="55"
+           CornerRadius="4"
+           Margin="0,20,0,0" />
+        
+        <!-- Create Account Button -->
+        <Button
+           x:Name="CreateButton"
+           Text="CREATE ACCOUNT"
+           Clicked="CreateClicked"
+           BackgroundColor="#0D0D0D"
+           TextColor="White"
+           BorderColor="White"
+           BorderWidth="1"
+           FontAttributes="Bold"
+           FontSize="16"
+           HeightRequest="55"
+           CornerRadius="4"
+           Margin="0,10,0,0" />
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomGarmentApp.Pages.RegisterPage"
+             Title="Register"
+             BackgroundColor="#0D0D0D"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+    <VerticalStackLayout
+            Padding="30"
+            Spacing="15"
+            VerticalOptions="Center">
+            <Label
+                Text="CUSTOM GARMENT"
+                FontSize="28"
+                FontAttributes="Bold"
+                CharacterSpacing="3"
+                TextColor="White"
+                HorizontalOptions="Center" />
+
+            <!-- Registration Heading -->
+            <Label
+                Text="CREATE YOUR ACCOUNT"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="#B0B0B0"
+                HorizontalOptions="Center"
+                Margin="0,25,0,0" />
+
+            <Entry
+                x:Name="FullNameEntry"
+                Placeholder="Full Name"
+                TextColor="White"
+                PlaceholderColor="#888888"
+                BackgroundColor="#222222"
+                HeightRequest="55"
+                Margin="0,25,0,0" />
+
+            <!-- Email -->
+            <Entry
+                x:Name="EmailEntry"
+                Placeholder="Email Address"
+                Keyboard="Email"
+                TextColor="White"
+                PlaceholderColor="#888888"
+                BackgroundColor="#222222"
+                HeightRequest="55" />
+
+            <!-- Password -->
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                TextColor="White"
+                PlaceholderColor="#888888"
+                BackgroundColor="#222222"
+                HeightRequest="55" />
+
+            <!-- Confirm Password -->
+            <Entry
+                x:Name="ConfirmPasswordEntry"
+                Placeholder="Confirm Password"
+                IsPassword="True"
+                TextColor="White"
+                PlaceholderColor="#888888"
+                BackgroundColor="#222222"
+                HeightRequest="55" />
+
+            <!-- Register Button -->
+            <Button
+                x:Name="RegisterButton"
+                Text="CREATE ACCOUNT"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="16"
+                HeightRequest="55"
+                CornerRadius="4"
+                Margin="0,20,0,0" />
+
+            <!-- Back to Login -->
+            <Button
+                x:Name="BackToLoginButton"
+                Text="BACK TO LOGIN"
+                Clicked="BackClicked"
+                BackgroundColor="#0D0D0D"
+                TextColor="White"
+                BorderColor="White"
+                BorderWidth="1"
+                FontAttributes="Bold"
+                FontSize="16"
+                HeightRequest="55"
+                CornerRadius="4" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
