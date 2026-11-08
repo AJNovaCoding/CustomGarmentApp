@@ -8,11 +8,9 @@
     Shell.NavBarIsVisible="False">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="25"
-            Spacing="20">
+        <VerticalStackLayout Padding="25" Spacing="20">
 
-            <!-- Store Heading -->
+            <!-- Store heading -->
             <Label
                 Text="CUSTOM GARMENT"
                 FontSize="28"
@@ -28,8 +26,42 @@
                 TextColor="#B0B0B0"
                 HorizontalOptions="Center" />
 
+            <!-- Search functionality -->
+            <Entry
+                x:Name="SearchEntry"
+                Placeholder="Search garments (e.g. dress*)"
+                TextColor="White"
+                PlaceholderColor="#888888"
+                BackgroundColor="#222222"
+                HeightRequest="55" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Button
+                    Text="SEARCH"
+                    Clicked="SearchClicked"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="Fill"
+                    WidthRequest="150" />
+
+                <Button
+                    Text="CLEAR"
+                    Clicked="ClearClicked"
+                    BackgroundColor="#333333"
+                    TextColor="White"
+                    WidthRequest="100" />
+            </HorizontalStackLayout>
+
+            <!-- Search feedback -->
+            <Label
+                x:Name="ResultsLabel"
+                Text="Showing all 3 garments"
+                TextColor="#B0B0B0"
+                FontSize="14" />
+
             <!-- Garment 1 -->
             <Border
+                x:Name="JacketCard"
                 BackgroundColor="#222222"
                 Padding="20"
                 StrokeThickness="0">
@@ -54,6 +86,7 @@
 
             <!-- Garment 2 -->
             <Border
+                x:Name="DressCard"
                 BackgroundColor="#222222"
                 Padding="20"
                 StrokeThickness="0">
@@ -78,6 +111,7 @@
 
             <!-- Garment 3 -->
             <Border
+                x:Name="SkirtCard"
                 BackgroundColor="#222222"
                 Padding="20"
                 StrokeThickness="0">
@@ -102,5 +136,5 @@
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
+

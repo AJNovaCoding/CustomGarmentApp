@@ -1,4 +1,6 @@
-﻿namespace CustomGarmentApp
+﻿using CustomGarmentApp.Pages;
+
+namespace CustomGarmentApp
 {
     public partial class AppShell : Shell
     {
@@ -14,6 +16,10 @@
             Routing.RegisterRoute(
                 "GarmentPage",
                 typeof(Pages.GarmentPage));
+
+            Routing.RegisterRoute(
+                "ChangePasswordPage",
+                typeof(ChangePasswordPage));
 
         }
     }

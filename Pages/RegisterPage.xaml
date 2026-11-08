@@ -70,6 +70,7 @@
             <Button
                 x:Name="RegisterButton"
                 Text="CREATE ACCOUNT"
+                Clicked="RegisterClicked"
                 BackgroundColor="White"
                 TextColor="Black"
                 FontAttributes="Bold"
