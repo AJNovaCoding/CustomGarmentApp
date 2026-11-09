@@ -1,4 +1,3 @@
-
 using CustomGarmentApp.Services;
 
 namespace CustomGarmentApp.Pages;
@@ -19,6 +18,7 @@ public partial class LoginPage : ContentPage
     // Authenticates users against the SQLite database.
     private async void LoginClicked(object? sender, EventArgs e)
     {
+
         string email = EmailEntry.Text?.Trim() ?? "";
         string password = PasswordEntry.Text ?? "";
 
@@ -49,6 +49,33 @@ public partial class LoginPage : ContentPage
                     "OK");
                 return;
             }
+
+
+            // Determine the account role only after authentication succeeds.
+            bool isAdmin = await database.IsAdministratorAsync(email);
+
+
+            // Start an authenticated session after verifying
+            // the user's password and administrator role.
+            SessionService.StartSession(email, isAdmin);
+
+
+            if (isAdmin)
+            {
+                await DisplayAlertAsync(
+                    "Administrator Login",
+                    "Welcome! You are signed in as an administrator.",
+                    "OK");
+            }
+            else
+            {
+                await DisplayAlertAsync(
+                    "Customer Login",
+                    "Welcome! You are signed in as a customer.",
+                    "OK");
+            }
+
+
 
             // Clear sensitive information after successful login.
             PasswordEntry.Text = "";

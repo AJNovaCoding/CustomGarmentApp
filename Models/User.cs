@@ -19,5 +19,7 @@ namespace CustomGarmentApp.Models
         public string PasswordHash { get; set; } = "";
 
         public string PasswordSalt { get; set; } = "";
+
+        public bool IsAdmin { get; set; } = false;
     }
 }

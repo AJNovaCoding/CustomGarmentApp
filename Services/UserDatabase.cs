@@ -20,10 +20,14 @@ namespace CustomGarmentApp.Services
         }
 
         // Creates the user table if it does not already exist.
+
         public async Task InitializeAsync()
         {
+            // Creates the Users table if it does not already exist.
+            // including IsAdmin, to an existing table.
             await _database.CreateTableAsync<User>();
         }
+
 
         // Converts a password into a salted, one-way PBKDF2 hash.
         private static string HashPassword(
@@ -118,6 +122,21 @@ namespace CustomGarmentApp.Services
             await _database.UpdateAsync(user);
             return true;
         }
+
+        // Checks whether an existing user has administrator privileges.
+        public async Task<bool> IsAdministratorAsync(string email)
+        {
+            await InitializeAsync();
+
+            string normalizedEmail = email.Trim().ToLowerInvariant();
+
+            var user = await _database.Table<User>()
+                .Where(u => u.Email == normalizedEmail)
+                .FirstOrDefaultAsync();
+
+            return user?.IsAdmin == true;
+        }
+
     }
 }
 
