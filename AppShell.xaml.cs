@@ -21,6 +21,11 @@ namespace CustomGarmentApp
                 "ChangePasswordPage",
                 typeof(ChangePasswordPage));
 
+            Routing.RegisterRoute(
+                "GarmentSummaryPage",
+                typeof(Pages.GarmentSummaryPage));
+
+
         }
     }
 }

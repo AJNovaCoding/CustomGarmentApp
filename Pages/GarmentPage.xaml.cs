@@ -107,6 +107,29 @@ public partial class GarmentPage : ContentPage
                     }
                 };
 
+
+                var detailsButton = new Button
+                {
+                    Text = "VIEW DETAILS",
+                    BackgroundColor = Color.FromArgb("#555555"),
+                    TextColor = Colors.White
+                };
+
+                detailsButton.Clicked += async (sender, e) =>
+                {
+                    if (!SessionService.IsAuthenticated)
+                    {
+                        await Shell.Current.GoToAsync("//LoginPage");
+                        return;
+                    }
+
+                    await Shell.Current.GoToAsync(
+                        $"GarmentSummaryPage?garmentId={garment.Id}");
+                };
+
+                card.Children.Add(detailsButton);
+
+
                 card.Children.Add(editButton);
                 card.Children.Add(deleteButton);
 
