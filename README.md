@@ -57,6 +57,7 @@ The final development phase introduced a garment summary page connected to the c
 The final interface maintains a consistent dark theme with improved spacing, typography, and navigation.
 
 ## Demonstration Video
+https://youtu.be/e-k1_nD4sck
 
 Video link: **To be added after recording**
 
